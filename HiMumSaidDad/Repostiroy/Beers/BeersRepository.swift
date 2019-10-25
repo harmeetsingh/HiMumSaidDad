@@ -9,8 +9,10 @@ extension Repository {
 
     func fetchAllBeers(completion: @escaping (Result<[Beer], Error>) -> Void) {
 
-        let beersRequest = BeersRequest()
-        network.load(request: beersRequest) { result in
+        let request = BeersRequest()
+        let decoder = BeersResponseDecoder()
+
+        network.load(request: request, decoder: decoder) { result in
          
             switch result {
 

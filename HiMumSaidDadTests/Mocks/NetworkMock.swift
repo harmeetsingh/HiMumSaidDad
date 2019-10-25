@@ -14,7 +14,7 @@ struct NetworkMock: Network {
     var returnError = false
     var responseObject: Decodable?
 
-    func load(request: NetworkRequest, completion: @escaping (Result<Decodable, Error>) -> Void) {
+    func load(request: NetworkRequest, decoder: NetworkResponseDecoder, completion: @escaping (Result<Decodable, Error>) -> Void) {
         
         if returnError {
             completion(.failure(MockError.instance))

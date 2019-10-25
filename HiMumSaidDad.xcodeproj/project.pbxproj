@@ -14,6 +14,19 @@
 		6B4EF32C23631089007A2BC4 /* DatabaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF32B23631089007A2BC4 /* DatabaseMock.swift */; };
 		6B4EF32E236311DE007A2BC4 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF32D236311DE007A2BC4 /* MockError.swift */; };
 		6B4EF330236313EA007A2BC4 /* RepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF32F236313EA007A2BC4 /* RepositoryError.swift */; };
+		6B4EF33223631522007A2BC4 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF33123631521007A2BC4 /* NetworkSession.swift */; };
+		6B4EF334236315E5007A2BC4 /* NetworkSessionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF333236315E5007A2BC4 /* NetworkSessionError.swift */; };
+		6B4EF336236315F8007A2BC4 /* URLResponse+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF335236315F8007A2BC4 /* URLResponse+Extension.swift */; };
+		6B4EF339236317AB007A2BC4 /* NetworkSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF338236317AB007A2BC4 /* NetworkSessionTests.swift */; };
+		6B4EF33B23631876007A2BC4 /* NetworkRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF33A23631876007A2BC4 /* NetworkRequestMock.swift */; };
+		6B4EF342236318CD007A2BC4 /* NSObject+SuperSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF33F236318CD007A2BC4 /* NSObject+SuperSession.swift */; };
+		6B4EF343236318CD007A2BC4 /* SuperSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF340236318CD007A2BC4 /* SuperSession.swift */; };
+		6B4EF344236318CD007A2BC4 /* DataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF341236318CD007A2BC4 /* DataTask.swift */; };
+		6B4EF3462363198E007A2BC4 /* NetworkImageRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF3452363198E007A2BC4 /* NetworkImageRequestMock.swift */; };
+		6B4EF34823631A6A007A2BC4 /* tick.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B4EF34723631A6A007A2BC4 /* tick.jpg */; };
+		6B4EF34F23631D62007A2BC4 /* NetworkResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF34E23631D61007A2BC4 /* NetworkResponseDecoder.swift */; };
+		6B4EF35223631DC6007A2BC4 /* BeersResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF35123631DC6007A2BC4 /* BeersResponseDecoder.swift */; };
+		6B4EF35423631F1A007A2BC4 /* NetworkResponseDecoderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF35323631F1A007A2BC4 /* NetworkResponseDecoderMock.swift */; };
 		6B98DF192362F9FB0021E75E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF182362F9FB0021E75E /* AppDelegate.swift */; };
 		6B98DF1D2362F9FC0021E75E /* BeersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF1C2362F9FC0021E75E /* BeersListViewController.swift */; };
 		6B98DF222362F9FE0021E75E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B98DF212362F9FE0021E75E /* Assets.xcassets */; };
@@ -58,6 +71,19 @@
 		6B4EF32B23631089007A2BC4 /* DatabaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseMock.swift; sourceTree = "<group>"; };
 		6B4EF32D236311DE007A2BC4 /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
 		6B4EF32F236313EA007A2BC4 /* RepositoryError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryError.swift; sourceTree = "<group>"; };
+		6B4EF33123631521007A2BC4 /* NetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		6B4EF333236315E5007A2BC4 /* NetworkSessionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSessionError.swift; sourceTree = "<group>"; };
+		6B4EF335236315F8007A2BC4 /* URLResponse+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLResponse+Extension.swift"; sourceTree = "<group>"; };
+		6B4EF338236317AB007A2BC4 /* NetworkSessionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSessionTests.swift; sourceTree = "<group>"; };
+		6B4EF33A23631876007A2BC4 /* NetworkRequestMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestMock.swift; sourceTree = "<group>"; };
+		6B4EF33F236318CD007A2BC4 /* NSObject+SuperSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+SuperSession.swift"; sourceTree = "<group>"; };
+		6B4EF340236318CD007A2BC4 /* SuperSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperSession.swift; sourceTree = "<group>"; };
+		6B4EF341236318CD007A2BC4 /* DataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTask.swift; sourceTree = "<group>"; };
+		6B4EF3452363198E007A2BC4 /* NetworkImageRequestMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkImageRequestMock.swift; sourceTree = "<group>"; };
+		6B4EF34723631A6A007A2BC4 /* tick.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tick.jpg; sourceTree = "<group>"; };
+		6B4EF34E23631D61007A2BC4 /* NetworkResponseDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponseDecoder.swift; sourceTree = "<group>"; };
+		6B4EF35123631DC6007A2BC4 /* BeersResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersResponseDecoder.swift; sourceTree = "<group>"; };
+		6B4EF35323631F1A007A2BC4 /* NetworkResponseDecoderMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponseDecoderMock.swift; sourceTree = "<group>"; };
 		6B98DF152362F9FB0021E75E /* HiMumSaidDad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiMumSaidDad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B98DF182362F9FB0021E75E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = HiMumSaidDad/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		6B98DF1C2362F9FC0021E75E /* BeersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListViewController.swift; sourceTree = "<group>"; };
@@ -123,14 +149,44 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
-		6B4EF32723630FC6007A2BC4 /* Mock */ = {
+		6B4EF32723630FC6007A2BC4 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				6B4EF35323631F1A007A2BC4 /* NetworkResponseDecoderMock.swift */,
+				6B4EF3452363198E007A2BC4 /* NetworkImageRequestMock.swift */,
+				6B4EF33A23631876007A2BC4 /* NetworkRequestMock.swift */,
 				6B4EF32823630FD2007A2BC4 /* NetworkMock.swift */,
 				6B4EF32D236311DE007A2BC4 /* MockError.swift */,
 				6B4EF32B23631089007A2BC4 /* DatabaseMock.swift */,
 			);
-			path = Mock;
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		6B4EF3372363168F007A2BC4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6B4EF338236317AB007A2BC4 /* NetworkSessionTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		6B4EF33E236318CD007A2BC4 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				6B4EF33F236318CD007A2BC4 /* NSObject+SuperSession.swift */,
+				6B4EF340236318CD007A2BC4 /* SuperSession.swift */,
+				6B4EF341236318CD007A2BC4 /* DataTask.swift */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		6B4EF35023631D67007A2BC4 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				6B4EF34E23631D61007A2BC4 /* NetworkResponseDecoder.swift */,
+				6B4EF35123631DC6007A2BC4 /* BeersResponseDecoder.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 		6B98DF0C2362F9FB0021E75E = {
@@ -228,6 +284,9 @@
 			isa = PBXGroup;
 			children = (
 				6B98DF80236306290021E75E /* Network.swift */,
+				6B4EF33123631521007A2BC4 /* NetworkSession.swift */,
+				6B4EF333236315E5007A2BC4 /* NetworkSessionError.swift */,
+				6B4EF35023631D67007A2BC4 /* Responses */,
 				6B4EF31F23630BD6007A2BC4 /* Requests */,
 			);
 			path = Network;
@@ -270,6 +329,7 @@
 		6B98DF51236302620021E75E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				6B4EF335236315F8007A2BC4 /* URLResponse+Extension.swift */,
 				6B98DF52236302780021E75E /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
@@ -286,7 +346,9 @@
 		6B98DF8A236307830021E75E /* HiMumSaidDadTests */ = {
 			isa = PBXGroup;
 			children = (
-				6B4EF32723630FC6007A2BC4 /* Mock */,
+				6B4EF33E236318CD007A2BC4 /* Vendor */,
+				6B4EF3372363168F007A2BC4 /* Network */,
+				6B4EF32723630FC6007A2BC4 /* Mocks */,
 				6B98DF992363086F0021E75E /* Resources */,
 				6B98DF932363078B0021E75E /* Repository */,
 				6B98DF8B236307830021E75E /* HiMumSaidDadTests.swift */,
@@ -317,6 +379,7 @@
 		6B98DF992363086F0021E75E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6B4EF34723631A6A007A2BC4 /* tick.jpg */,
 				6B98DF9F236309D40021E75E /* beer-invalid.json */,
 				6B98DF9A236308860021E75E /* beer-valid.json */,
 			);
@@ -434,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B98DF9B236308860021E75E /* beer-valid.json in Resources */,
+				6B4EF34823631A6A007A2BC4 /* tick.jpg in Resources */,
 				6B98DFA0236309FB0021E75E /* beer-invalid.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,7 +539,10 @@
 				6B98DFB023630AA50021E75E /* NetworkRequestError.swift in Sources */,
 				6B98DFB123630AA50021E75E /* NetworkRequestType.swift in Sources */,
 				6B98DF81236306290021E75E /* Network.swift in Sources */,
+				6B4EF35223631DC6007A2BC4 /* BeersResponseDecoder.swift in Sources */,
+				6B4EF33223631522007A2BC4 /* NetworkSession.swift in Sources */,
 				6B98DF84236306630021E75E /* Database.swift in Sources */,
+				6B4EF34F23631D62007A2BC4 /* NetworkResponseDecoder.swift in Sources */,
 				6B98DFAC23630AA50021E75E /* NetworkImageRequest.swift in Sources */,
 				6B4EF32123630C01007A2BC4 /* BeersRequest.swift in Sources */,
 				6B98DF53236302780021E75E /* UIViewController+Extension.swift in Sources */,
@@ -487,7 +554,9 @@
 				6B98DF1D2362F9FC0021E75E /* BeersListViewController.swift in Sources */,
 				6B98DF192362F9FB0021E75E /* AppDelegate.swift in Sources */,
 				6B98DF55236302900021E75E /* BeersListCoordinator.swift in Sources */,
+				6B4EF336236315F8007A2BC4 /* URLResponse+Extension.swift in Sources */,
 				6B4EF330236313EA007A2BC4 /* RepositoryError.swift in Sources */,
+				6B4EF334236315E5007A2BC4 /* NetworkSessionError.swift in Sources */,
 				6B98DFB223630AA50021E75E /* NetworkRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,13 +565,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B4EF33B23631876007A2BC4 /* NetworkRequestMock.swift in Sources */,
 				6B4EF32E236311DE007A2BC4 /* MockError.swift in Sources */,
 				6B98DF8C236307830021E75E /* HiMumSaidDadTests.swift in Sources */,
+				6B4EF343236318CD007A2BC4 /* SuperSession.swift in Sources */,
 				6B98DF98236307C40021E75E /* BeerTests.swift in Sources */,
 				6B4EF32C23631089007A2BC4 /* DatabaseMock.swift in Sources */,
+				6B4EF344236318CD007A2BC4 /* DataTask.swift in Sources */,
 				6B4EF32323630C43007A2BC4 /* BeersRequestTests.swift in Sources */,
+				6B4EF339236317AB007A2BC4 /* NetworkSessionTests.swift in Sources */,
+				6B4EF3462363198E007A2BC4 /* NetworkImageRequestMock.swift in Sources */,
+				6B4EF35423631F1A007A2BC4 /* NetworkResponseDecoderMock.swift in Sources */,
 				6B4EF32A23631068007A2BC4 /* RepositoryTests.swift in Sources */,
 				6B4EF32923630FD2007A2BC4 /* NetworkMock.swift in Sources */,
+				6B4EF342236318CD007A2BC4 /* NSObject+SuperSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
