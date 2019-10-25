@@ -9,5 +9,6 @@ extension Repoistory {
 
     func fetchAllBeers(completion: Result<[Beer], Error>) {
         
+
     }
 }
