@@ -4,7 +4,7 @@ protocol RepositoryType: BeersRepository {
 
 }
 
-class Repoistory: RepositoryType {
+class Repository: RepositoryType {
 
     let network: Network
     let database: Database

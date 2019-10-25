@@ -1,5 +1,5 @@
 //
-//  BeersRepository.swift
+//  MockError.swift
 //  HiMumSaidDadTests
 //
 //  Created by Harmeet Singh on 25/10/2019.
@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+enum MockError: Error {
+    case instance
+}
