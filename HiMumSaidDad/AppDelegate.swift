@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         let coordinatorFactory = CoordinatorFactory()
-        let beersListCoordaintor = coordinatorFactory.makeBeersList()
-        beersListCoordaintor.start(on: window)
+        let BeersGridCoordaintor = coordinatorFactory.makeBeersGrid()
+        BeersGridCoordaintor.start(on: window)
 
         return true
     }

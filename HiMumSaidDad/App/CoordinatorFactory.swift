@@ -2,13 +2,13 @@ import Foundation
 
 protocol CoordinatorFactoryType {
 
-    func makeBeersList() -> BeersListCoordinatorType
+    func makeBeersGrid() -> BeersGridCoordinatorType
 }
 
 struct CoordinatorFactory: CoordinatorFactoryType {
 
-    func makeBeersList() -> BeersListCoordinatorType {
-        return BeersListCoordinator()
+    func makeBeersGrid() -> BeersGridCoordinatorType {
+        return BeersGridCoordinator()
 //        let network = NetworkSession(session: URLSession.shared, domain: domain)
 //        let database = UserDefaults.standard
 //        let repository = Repository(network: network, database: database)

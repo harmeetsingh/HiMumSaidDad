@@ -1,10 +1,9 @@
 import UIKit
 
-class BeersListViewController: UIViewController {
+class BeersGridViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 }
-

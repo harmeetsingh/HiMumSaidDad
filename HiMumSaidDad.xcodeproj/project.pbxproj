@@ -27,17 +27,21 @@
 		6B4EF34F23631D62007A2BC4 /* NetworkResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF34E23631D61007A2BC4 /* NetworkResponseDecoder.swift */; };
 		6B4EF35223631DC6007A2BC4 /* BeersResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF35123631DC6007A2BC4 /* BeersResponseDecoder.swift */; };
 		6B4EF35423631F1A007A2BC4 /* NetworkResponseDecoderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF35323631F1A007A2BC4 /* NetworkResponseDecoderMock.swift */; };
+		6B4EF356236321D3007A2BC4 /* BeersGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF355236321D3007A2BC4 /* BeersGridViewModel.swift */; };
+		6B4EF3592363242B007A2BC4 /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF3582363242B007A2BC4 /* ImageRepository.swift */; };
+		6B4EF35B2363248D007A2BC4 /* BeerImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF35A2363248D007A2BC4 /* BeerImageRequest.swift */; };
+		6B4EF35D236325A0007A2BC4 /* ImageRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4EF35C236325A0007A2BC4 /* ImageRepositoryTests.swift */; };
 		6B98DF192362F9FB0021E75E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF182362F9FB0021E75E /* AppDelegate.swift */; };
-		6B98DF1D2362F9FC0021E75E /* BeersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF1C2362F9FC0021E75E /* BeersListViewController.swift */; };
+		6B98DF1D2362F9FC0021E75E /* BeersGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF1C2362F9FC0021E75E /* BeersGridViewController.swift */; };
 		6B98DF222362F9FE0021E75E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B98DF212362F9FE0021E75E /* Assets.xcassets */; };
 		6B98DF372362FB8A0021E75E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B98DF362362FB8A0021E75E /* LaunchScreen.storyboard */; };
-		6B98DF392362FB8E0021E75E /* BeersList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B98DF382362FB8E0021E75E /* BeersList.storyboard */; };
+		6B98DF392362FB8E0021E75E /* BeersGrid.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B98DF382362FB8E0021E75E /* BeersGrid.storyboard */; };
 		6B98DF472362FEEE0021E75E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B98DF3F2362FDEB0021E75E /* RxSwift.framework */; };
 		6B98DF482362FEEE0021E75E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B98DF3C2362FDEB0021E75E /* RxCocoa.framework */; };
 		6B98DF492362FEEE0021E75E /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B98DF3B2362FDEB0021E75E /* RxRelay.framework */; };
 		6B98DF4B236301EE0021E75E /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF4A236301EE0021E75E /* CoordinatorFactory.swift */; };
 		6B98DF53236302780021E75E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF52236302780021E75E /* UIViewController+Extension.swift */; };
-		6B98DF55236302900021E75E /* BeersListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF54236302900021E75E /* BeersListCoordinator.swift */; };
+		6B98DF55236302900021E75E /* BeersGridCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF54236302900021E75E /* BeersGridCoordinator.swift */; };
 		6B98DF58236303050021E75E /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF57236303050021E75E /* Beer.swift */; };
 		6B98DF7B236304AE0021E75E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF7A236304AE0021E75E /* SceneDelegate.swift */; };
 		6B98DF7D236305E10021E75E /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF7C236305E10021E75E /* Repository.swift */; };
@@ -84,13 +88,17 @@
 		6B4EF34E23631D61007A2BC4 /* NetworkResponseDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponseDecoder.swift; sourceTree = "<group>"; };
 		6B4EF35123631DC6007A2BC4 /* BeersResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersResponseDecoder.swift; sourceTree = "<group>"; };
 		6B4EF35323631F1A007A2BC4 /* NetworkResponseDecoderMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponseDecoderMock.swift; sourceTree = "<group>"; };
+		6B4EF355236321D3007A2BC4 /* BeersGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersGridViewModel.swift; sourceTree = "<group>"; };
+		6B4EF3582363242B007A2BC4 /* ImageRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		6B4EF35A2363248D007A2BC4 /* BeerImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerImageRequest.swift; sourceTree = "<group>"; };
+		6B4EF35C236325A0007A2BC4 /* ImageRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepositoryTests.swift; sourceTree = "<group>"; };
 		6B98DF152362F9FB0021E75E /* HiMumSaidDad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiMumSaidDad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B98DF182362F9FB0021E75E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = HiMumSaidDad/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
-		6B98DF1C2362F9FC0021E75E /* BeersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListViewController.swift; sourceTree = "<group>"; };
+		6B98DF1C2362F9FC0021E75E /* BeersGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersGridViewController.swift; sourceTree = "<group>"; };
 		6B98DF212362F9FE0021E75E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B98DF262362F9FE0021E75E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		6B98DF362362FB8A0021E75E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6B98DF382362FB8E0021E75E /* BeersList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BeersList.storyboard; sourceTree = "<group>"; };
+		6B98DF382362FB8E0021E75E /* BeersGrid.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BeersGrid.storyboard; sourceTree = "<group>"; };
 		6B98DF3B2362FDEB0021E75E /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		6B98DF3C2362FDEB0021E75E /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		6B98DF3D2362FDEB0021E75E /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
@@ -98,7 +106,7 @@
 		6B98DF3F2362FDEB0021E75E /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		6B98DF4A236301EE0021E75E /* CoordinatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
 		6B98DF52236302780021E75E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		6B98DF54236302900021E75E /* BeersListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListCoordinator.swift; sourceTree = "<group>"; };
+		6B98DF54236302900021E75E /* BeersGridCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersGridCoordinator.swift; sourceTree = "<group>"; };
 		6B98DF57236303050021E75E /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		6B98DF7A236304AE0021E75E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6B98DF7C236305E10021E75E /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -145,6 +153,7 @@
 				6B98DFA823630AA50021E75E /* NetworkRequest */,
 				6B98DFA323630AA40021E75E /* NetworkImageRequest */,
 				6B4EF32023630C01007A2BC4 /* BeersRequest.swift */,
+				6B4EF35A2363248D007A2BC4 /* BeerImageRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -187,6 +196,23 @@
 				6B4EF35123631DC6007A2BC4 /* BeersResponseDecoder.swift */,
 			);
 			path = Responses;
+			sourceTree = "<group>";
+		};
+		6B4EF3572363241E007A2BC4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6B4EF3582363242B007A2BC4 /* ImageRepository.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		6B4EF35E236325B9007A2BC4 /* Beers */ = {
+			isa = PBXGroup;
+			children = (
+				6B98DF97236307C40021E75E /* BeerTests.swift */,
+				6B4EF32223630C43007A2BC4 /* BeersRequestTests.swift */,
+			);
+			path = Beers;
 			sourceTree = "<group>";
 		};
 		6B98DF0C2362F9FB0021E75E = {
@@ -238,6 +264,7 @@
 			children = (
 				6B98DF7C236305E10021E75E /* Repository.swift */,
 				6B4EF32F236313EA007A2BC4 /* RepositoryError.swift */,
+				6B4EF3572363241E007A2BC4 /* Images */,
 				6B98DF96236307A90021E75E /* Beers */,
 			);
 			path = Repostiroy;
@@ -246,7 +273,7 @@
 		6B98DF2E2362FA1F0021E75E /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				6B98DF4D236302400021E75E /* BeersList */,
+				6B98DF4D236302400021E75E /* BeersGrid */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -292,21 +319,21 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		6B98DF4D236302400021E75E /* BeersList */ = {
+		6B98DF4D236302400021E75E /* BeersGrid */ = {
 			isa = PBXGroup;
 			children = (
 				6B98DF502363024F0021E75E /* Coordinator */,
 				6B98DF4F2363024C0021E75E /* ViewModel */,
 				6B98DF4E236302480021E75E /* View */,
 			);
-			path = BeersList;
+			path = BeersGrid;
 			sourceTree = "<group>";
 		};
 		6B98DF4E236302480021E75E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6B98DF382362FB8E0021E75E /* BeersList.storyboard */,
-				6B98DF1C2362F9FC0021E75E /* BeersListViewController.swift */,
+				6B98DF382362FB8E0021E75E /* BeersGrid.storyboard */,
+				6B98DF1C2362F9FC0021E75E /* BeersGridViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,6 +341,7 @@
 		6B98DF4F2363024C0021E75E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6B4EF355236321D3007A2BC4 /* BeersGridViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -321,7 +349,7 @@
 		6B98DF502363024F0021E75E /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				6B98DF54236302900021E75E /* BeersListCoordinator.swift */,
+				6B98DF54236302900021E75E /* BeersGridCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -360,9 +388,9 @@
 		6B98DF932363078B0021E75E /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				6B4EF35E236325B9007A2BC4 /* Beers */,
 				6B98DF94236307A70021E75E /* RepositoryTests.swift */,
-				6B98DF97236307C40021E75E /* BeerTests.swift */,
-				6B4EF32223630C43007A2BC4 /* BeersRequestTests.swift */,
+				6B4EF35C236325A0007A2BC4 /* ImageRepositoryTests.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -486,7 +514,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B98DF392362FB8E0021E75E /* BeersList.storyboard in Resources */,
+				6B98DF392362FB8E0021E75E /* BeersGrid.storyboard in Resources */,
 				6B98DF222362F9FE0021E75E /* Assets.xcassets in Resources */,
 				6B98DF372362FB8A0021E75E /* LaunchScreen.storyboard in Resources */,
 			);
@@ -544,16 +572,19 @@
 				6B98DF84236306630021E75E /* Database.swift in Sources */,
 				6B4EF34F23631D62007A2BC4 /* NetworkResponseDecoder.swift in Sources */,
 				6B98DFAC23630AA50021E75E /* NetworkImageRequest.swift in Sources */,
+				6B4EF35B2363248D007A2BC4 /* BeerImageRequest.swift in Sources */,
 				6B4EF32123630C01007A2BC4 /* BeersRequest.swift in Sources */,
 				6B98DF53236302780021E75E /* UIViewController+Extension.swift in Sources */,
 				6B98DF7B236304AE0021E75E /* SceneDelegate.swift in Sources */,
+				6B4EF356236321D3007A2BC4 /* BeersGridViewModel.swift in Sources */,
 				6B98DF7F2363060A0021E75E /* BeersRepository.swift in Sources */,
 				6B98DF58236303050021E75E /* Beer.swift in Sources */,
 				6B98DF7D236305E10021E75E /* Repository.swift in Sources */,
 				6B98DF4B236301EE0021E75E /* CoordinatorFactory.swift in Sources */,
-				6B98DF1D2362F9FC0021E75E /* BeersListViewController.swift in Sources */,
+				6B98DF1D2362F9FC0021E75E /* BeersGridViewController.swift in Sources */,
 				6B98DF192362F9FB0021E75E /* AppDelegate.swift in Sources */,
-				6B98DF55236302900021E75E /* BeersListCoordinator.swift in Sources */,
+				6B98DF55236302900021E75E /* BeersGridCoordinator.swift in Sources */,
+				6B4EF3592363242B007A2BC4 /* ImageRepository.swift in Sources */,
 				6B4EF336236315F8007A2BC4 /* URLResponse+Extension.swift in Sources */,
 				6B4EF330236313EA007A2BC4 /* RepositoryError.swift in Sources */,
 				6B4EF334236315E5007A2BC4 /* NetworkSessionError.swift in Sources */,
@@ -574,6 +605,7 @@
 				6B4EF344236318CD007A2BC4 /* DataTask.swift in Sources */,
 				6B4EF32323630C43007A2BC4 /* BeersRequestTests.swift in Sources */,
 				6B4EF339236317AB007A2BC4 /* NetworkSessionTests.swift in Sources */,
+				6B4EF35D236325A0007A2BC4 /* ImageRepositoryTests.swift in Sources */,
 				6B4EF3462363198E007A2BC4 /* NetworkImageRequestMock.swift in Sources */,
 				6B4EF35423631F1A007A2BC4 /* NetworkResponseDecoderMock.swift in Sources */,
 				6B4EF32A23631068007A2BC4 /* RepositoryTests.swift in Sources */,
