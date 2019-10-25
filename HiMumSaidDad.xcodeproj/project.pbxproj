@@ -20,6 +20,10 @@
 		6B98DF55236302900021E75E /* BeersListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF54236302900021E75E /* BeersListCoordinator.swift */; };
 		6B98DF58236303050021E75E /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF57236303050021E75E /* Beer.swift */; };
 		6B98DF7B236304AE0021E75E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF7A236304AE0021E75E /* SceneDelegate.swift */; };
+		6B98DF7D236305E10021E75E /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF7C236305E10021E75E /* Repository.swift */; };
+		6B98DF7F2363060A0021E75E /* BeersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF7E2363060A0021E75E /* BeersRepository.swift */; };
+		6B98DF81236306290021E75E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF80236306290021E75E /* Network.swift */; };
+		6B98DF84236306630021E75E /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF83236306630021E75E /* Database.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		6B98DF54236302900021E75E /* BeersListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListCoordinator.swift; sourceTree = "<group>"; };
 		6B98DF57236303050021E75E /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		6B98DF7A236304AE0021E75E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6B98DF7C236305E10021E75E /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		6B98DF7E2363060A0021E75E /* BeersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersRepository.swift; sourceTree = "<group>"; };
+		6B98DF80236306290021E75E /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		6B98DF83236306630021E75E /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,7 @@
 				6B98DF2C2362FA140021E75E /* App */,
 				6B98DF2E2362FA1F0021E75E /* UseCases */,
 				6B98DF4C236302140021E75E /* Network */,
+				6B98DF82236306510021E75E /* Database */,
 				6B98DF2D2362FA180021E75E /* Repostiroy */,
 				6B98DF51236302620021E75E /* Extensions */,
 				6B98DF2F2362FA260021E75E /* Resources */,
@@ -100,6 +109,8 @@
 		6B98DF2D2362FA180021E75E /* Repostiroy */ = {
 			isa = PBXGroup;
 			children = (
+				6B98DF7C236305E10021E75E /* Repository.swift */,
+				6B98DF7E2363060A0021E75E /* BeersRepository.swift */,
 			);
 			path = Repostiroy;
 			sourceTree = "<group>";
@@ -144,6 +155,7 @@
 		6B98DF4C236302140021E75E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				6B98DF80236306290021E75E /* Network.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -197,6 +209,14 @@
 				6B98DF57236303050021E75E /* Beer.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6B98DF82236306510021E75E /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				6B98DF83236306630021E75E /* Database.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,9 +318,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B98DF81236306290021E75E /* Network.swift in Sources */,
+				6B98DF84236306630021E75E /* Database.swift in Sources */,
 				6B98DF53236302780021E75E /* UIViewController+Extension.swift in Sources */,
 				6B98DF7B236304AE0021E75E /* SceneDelegate.swift in Sources */,
+				6B98DF7F2363060A0021E75E /* BeersRepository.swift in Sources */,
 				6B98DF58236303050021E75E /* Beer.swift in Sources */,
+				6B98DF7D236305E10021E75E /* Repository.swift in Sources */,
 				6B98DF4B236301EE0021E75E /* CoordinatorFactory.swift in Sources */,
 				6B98DF1D2362F9FC0021E75E /* BeersListViewController.swift in Sources */,
 				6B98DF192362F9FB0021E75E /* AppDelegate.swift in Sources */,
