@@ -24,7 +24,22 @@
 		6B98DF7F2363060A0021E75E /* BeersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF7E2363060A0021E75E /* BeersRepository.swift */; };
 		6B98DF81236306290021E75E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF80236306290021E75E /* Network.swift */; };
 		6B98DF84236306630021E75E /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF83236306630021E75E /* Database.swift */; };
+		6B98DF8C236307830021E75E /* HiMumSaidDadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF8B236307830021E75E /* HiMumSaidDadTests.swift */; };
+		6B98DF95236307A70021E75E /* BeersRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF94236307A70021E75E /* BeersRepositoryTests.swift */; };
+		6B98DF98236307C40021E75E /* BeerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98DF97236307C40021E75E /* BeerTests.swift */; };
+		6B98DF9B236308860021E75E /* beer-valid.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B98DF9A236308860021E75E /* beer-valid.json */; };
+		6B98DFA0236309FB0021E75E /* beer-invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B98DF9F236309D40021E75E /* beer-invalid.json */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B98DF8E236307830021E75E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B98DF0D2362F9FB0021E75E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B98DF142362F9FB0021E75E;
+			remoteInfo = HiMumSaidDad;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6B98DF152362F9FB0021E75E /* HiMumSaidDad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiMumSaidDad.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +63,13 @@
 		6B98DF7E2363060A0021E75E /* BeersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersRepository.swift; sourceTree = "<group>"; };
 		6B98DF80236306290021E75E /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		6B98DF83236306630021E75E /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		6B98DF89236307830021E75E /* HiMumSaidDadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HiMumSaidDadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B98DF8B236307830021E75E /* HiMumSaidDadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiMumSaidDadTests.swift; sourceTree = "<group>"; };
+		6B98DF8D236307830021E75E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B98DF94236307A70021E75E /* BeersRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersRepositoryTests.swift; sourceTree = "<group>"; };
+		6B98DF97236307C40021E75E /* BeerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerTests.swift; sourceTree = "<group>"; };
+		6B98DF9A236308860021E75E /* beer-valid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "beer-valid.json"; sourceTree = "<group>"; };
+		6B98DF9F236309D40021E75E /* beer-invalid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "beer-invalid.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +83,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6B98DF86236307830021E75E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -68,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				6B98DF172362F9FB0021E75E /* HiMumSaidDad */,
+				6B98DF8A236307830021E75E /* HiMumSaidDadTests */,
 				6B98DF162362F9FB0021E75E /* Products */,
 				6B98DF3A2362FDEB0021E75E /* Frameworks */,
 			);
@@ -77,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				6B98DF152362F9FB0021E75E /* HiMumSaidDad.app */,
+				6B98DF89236307830021E75E /* HiMumSaidDadTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,7 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				6B98DF7C236305E10021E75E /* Repository.swift */,
-				6B98DF7E2363060A0021E75E /* BeersRepository.swift */,
+				6B98DF96236307A90021E75E /* Beers */,
 			);
 			path = Repostiroy;
 			sourceTree = "<group>";
@@ -163,7 +194,6 @@
 		6B98DF4D236302400021E75E /* BeersList */ = {
 			isa = PBXGroup;
 			children = (
-				6B98DF56236302F90021E75E /* Model */,
 				6B98DF502363024F0021E75E /* Coordinator */,
 				6B98DF4F2363024C0021E75E /* ViewModel */,
 				6B98DF4E236302480021E75E /* View */,
@@ -203,20 +233,50 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		6B98DF56236302F90021E75E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				6B98DF57236303050021E75E /* Beer.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		6B98DF82236306510021E75E /* Database */ = {
 			isa = PBXGroup;
 			children = (
 				6B98DF83236306630021E75E /* Database.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		6B98DF8A236307830021E75E /* HiMumSaidDadTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B98DF992363086F0021E75E /* Resources */,
+				6B98DF932363078B0021E75E /* Repository */,
+				6B98DF8B236307830021E75E /* HiMumSaidDadTests.swift */,
+				6B98DF8D236307830021E75E /* Info.plist */,
+			);
+			path = HiMumSaidDadTests;
+			sourceTree = "<group>";
+		};
+		6B98DF932363078B0021E75E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				6B98DF94236307A70021E75E /* BeersRepositoryTests.swift */,
+				6B98DF97236307C40021E75E /* BeerTests.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		6B98DF96236307A90021E75E /* Beers */ = {
+			isa = PBXGroup;
+			children = (
+				6B98DF57236303050021E75E /* Beer.swift */,
+				6B98DF7E2363060A0021E75E /* BeersRepository.swift */,
+			);
+			path = Beers;
+			sourceTree = "<group>";
+		};
+		6B98DF992363086F0021E75E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6B98DF9F236309D40021E75E /* beer-invalid.json */,
+				6B98DF9A236308860021E75E /* beer-valid.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +300,24 @@
 			productReference = 6B98DF152362F9FB0021E75E /* HiMumSaidDad.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6B98DF88236307830021E75E /* HiMumSaidDadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B98DF90236307830021E75E /* Build configuration list for PBXNativeTarget "HiMumSaidDadTests" */;
+			buildPhases = (
+				6B98DF85236307830021E75E /* Sources */,
+				6B98DF86236307830021E75E /* Frameworks */,
+				6B98DF87236307830021E75E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B98DF8F236307830021E75E /* PBXTargetDependency */,
+			);
+			name = HiMumSaidDadTests;
+			productName = HiMumSaidDadTests;
+			productReference = 6B98DF89236307830021E75E /* HiMumSaidDadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -252,6 +330,10 @@
 				TargetAttributes = {
 					6B98DF142362F9FB0021E75E = {
 						CreatedOnToolsVersion = 11.1;
+					};
+					6B98DF88236307830021E75E = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 6B98DF142362F9FB0021E75E;
 					};
 				};
 			};
@@ -269,6 +351,7 @@
 			projectRoot = "";
 			targets = (
 				6B98DF142362F9FB0021E75E /* HiMumSaidDad */,
+				6B98DF88236307830021E75E /* HiMumSaidDadTests */,
 			);
 		};
 /* End PBXProject section */
@@ -281,6 +364,15 @@
 				6B98DF392362FB8E0021E75E /* BeersList.storyboard in Resources */,
 				6B98DF222362F9FE0021E75E /* Assets.xcassets in Resources */,
 				6B98DF372362FB8A0021E75E /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B98DF87236307830021E75E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B98DF9B236308860021E75E /* beer-valid.json in Resources */,
+				6B98DFA0236309FB0021E75E /* beer-invalid.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +424,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6B98DF85236307830021E75E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B98DF8C236307830021E75E /* HiMumSaidDadTests.swift in Sources */,
+				6B98DF98236307C40021E75E /* BeerTests.swift in Sources */,
+				6B98DF95236307A70021E75E /* BeersRepositoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B98DF8F236307830021E75E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B98DF142362F9FB0021E75E /* HiMumSaidDad */;
+			targetProxy = 6B98DF8E236307830021E75E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6B98DF272362F9FE0021E75E /* Debug */ = {
@@ -491,6 +601,44 @@
 			};
 			name = Release;
 		};
+		6B98DF91236307830021E75E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HiMumSaidDadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = harmeet.singh.HiMumSaidDadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HiMumSaidDad.app/HiMumSaidDad";
+			};
+			name = Debug;
+		};
+		6B98DF92236307830021E75E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HiMumSaidDadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = harmeet.singh.HiMumSaidDadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HiMumSaidDad.app/HiMumSaidDad";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -508,6 +656,15 @@
 			buildConfigurations = (
 				6B98DF2A2362F9FE0021E75E /* Debug */,
 				6B98DF2B2362F9FE0021E75E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B98DF90236307830021E75E /* Build configuration list for PBXNativeTarget "HiMumSaidDadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B98DF91236307830021E75E /* Debug */,
+				6B98DF92236307830021E75E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

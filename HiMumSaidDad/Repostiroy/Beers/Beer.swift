@@ -3,7 +3,7 @@ import Foundation
 struct Beer: Codable {
 
     let name: String
-    let abv: Int
+    let abv: Double
     let imageURLString: String
 
     enum CodingKeys: String, CodingKey {
