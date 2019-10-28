@@ -6,12 +6,15 @@ protocol CoordinatorFactoryType {
 }
 
 struct CoordinatorFactory: CoordinatorFactoryType {
+    
+    private let repository: RepositoryType
+    
+    init(network: Network, database: Database) {
+        self.repository = Repository(network: network, database: database)
+    }
 
     func makeBeersGrid() -> BeersGridCoordinatorType {
-        return BeersGridCoordinator()
-//        let network = NetworkSession(session: URLSession.shared, domain: domain)
-//        let database = UserDefaults.standard
-//        let repository = Repository(network: network, database: database)
-//        return HomeCoordinator(clothingRepository: repository, imageRepository: repository)
+        return BeersGridCoordinator(beersRepository: repository, 
+                                    imageRepository: repository)
     }
 }

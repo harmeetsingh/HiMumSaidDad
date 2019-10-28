@@ -18,9 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError("No UI Window")
         }
 
-        let coordinatorFactory = CoordinatorFactory()
-        let BeersGridCoordaintor = coordinatorFactory.makeBeersGrid()
-        BeersGridCoordaintor.start(on: window)
+        let network = NetworkSession(session: URLSession.shared, domain: "https://api.punkapi.com")
+        let database: Database = UserDefaults.standard
+
+        let coordinatorFactory = CoordinatorFactory(network: network, database: database)
+        let brersGridCoordaintor = coordinatorFactory.makeBeersGrid()
+        brersGridCoordaintor.start(on: window)
 
         return true
     }

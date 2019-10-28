@@ -1,6 +1,6 @@
 import Foundation
 
-protocol RepositoryType: BeersRepository {
+protocol RepositoryType: BeersRepository,  ImageRepository {
 
 }
 

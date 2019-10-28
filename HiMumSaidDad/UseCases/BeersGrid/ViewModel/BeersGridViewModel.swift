@@ -1,18 +1,23 @@
 import Foundation
 import UIKit
+import RxCocoa
+import RxRelay
 import RxSwift
+import RxDataSources
+
+typealias BeersGridSectionModel = AnimatableSectionModel<BeersGridHeaderViewModel, BeerGridCellViewModel>
 
 protocol BeersGridViewModelInputs {
 
-//    func load()
+    func load()
 }
 
 protocol BeersGridViewModelOutputs {
 
-//    var showErrorView: Observable<Bool> { get }
-//    var isLoading: Observable<Bool> { get }
-//    var showCollectionView: Observable<Bool>  { get }
-//    var cellViewModels: Observable<[HomeCollectionViewCellViewModelType]> { get }
+    var showErrorView: Driver<Bool> { get }
+    var showCollectionView: Driver<Bool> { get }
+    var isLoading: Driver<Bool> { get }
+    var section: Driver<[BeersGridSectionModel]> { get }
 }
 
 protocol BeersGridViewModelType {
@@ -27,54 +32,57 @@ class BeersGridViewModel: BeersGridViewModelType, BeersGridViewModelInputs, Beer
 
     var inputs: BeersGridViewModelInputs { return self }
     var outputs: BeersGridViewModelOutputs { return self }
-//
-//    let clothingRepository: BeersRepository
-//    let imageRepository: ImageRepo
-//
-//    private(set) var showErrorView: Observable<Bool> = Observable(false)
-//    private(set) var isLoading: Observable<Bool> = Observable(true)
-//    private(set) var showCollectionView: Observable<Bool> = Observable(false)
-//    private(set) var cellViewModels: Observable<[HomeCollectionViewCellViewModelType]> = Observable([HomeCollectionViewCellViewModelType]())
-//
-//    // MARK: - Init
-//
-//    init(clothingRepository: ClothingRepository,
-//         imageRepository: ImageRepository) {
-//
-//        self.clothingRepository = clothingRepository
-//        self.imageRepository = imageRepository
-//    }
-//
-//    // MARK: - Inputs
-//
-//    func load() {
-//
-//        clothingRepository.fetchClothingItems { [weak self] result in
-//
-//            guard let self = self else {
-//                return
-//            }
-//
-//            self.isLoading.next(false)
-//
-//            switch result {
-//
-//            case .failure:
-//
-//                self.showErrorView.next(true)
-//
-//            case .success(let clothingItems):
-//
-//                clothingItems.forEach {
-//
-//                    let viewModel = HomeCollectionViewCellViewModel(model: $0,
-//                                                                    imageRepository: self.imageRepository,
-//                                                                    clothingRepository: self.clothingRepository)
-//                    self.cellViewModels.value.append(viewModel)
-//                }
-//
-//                self.showCollectionView.next(true)
-//            }
-//        }
-//    }
+
+    private let beersRepository: BeersRepository
+    private let imageRepository: ImageRepository
+
+    let showErrorView: Driver<Bool>
+    let showCollectionView: Driver<Bool>
+    let isLoading: Driver<Bool>
+    let section: Driver<[BeersGridSectionModel]>
+
+    private let loadRelay = PublishRelay<Void>()
+
+    // MARK: - Init
+
+    init(beersRepository: BeersRepository,
+         imageRepository: ImageRepository) {
+
+        self.beersRepository = beersRepository
+        self.imageRepository = imageRepository
+        
+        let activityIndicator = ActivityIndicator()
+        let errorRelay = PublishRelay<Error>()
+        
+        showErrorView = errorRelay
+            .map { _ in return true }
+            .startWith(false)
+            .asDriver(onErrorJustReturn: false)
+        
+        showCollectionView = showErrorView
+            .startWith(false)
+            .map(!)
+        
+        isLoading = activityIndicator
+            .asDriver()
+
+        section = loadRelay
+            .flatMap { _ in  
+                beersRepository
+                    .fetchAllBeers()
+                    .trackActivity(activityIndicator)
+                    .trackErrors(with: errorRelay)
+                    .map { beers -> [BeersGridSectionModel] in
+                        let viewModels = beers.map { BeerGridCellViewModel(beer: $0, imageRepository: imageRepository) }
+                        let headerViewModel = BeersGridHeaderViewModel()
+                        return [BeersGridSectionModel(model: headerViewModel, items: viewModels)]
+                    }
+        }.asDriver(onErrorJustReturn: [])
+    }
+
+    // MARK: - Inputs
+
+    func load() {
+        loadRelay.accept(())
+    }
 }
