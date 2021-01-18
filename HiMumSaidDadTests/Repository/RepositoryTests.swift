@@ -11,13 +11,13 @@ import XCTest
 
 class RepositoryTests: XCTestCase {
 
-    static var networkMock = NetworkMock()
-    static var databaseMock = DatabaseMock()
-    let sut = Repository(network: networkMock, database: databaseMock)
+    static var mockNetwork = MockNetwork()
+    static var mockDatabase = MockDatabase()
+    let sut = Repository(network: mockNetwork, database: mockDatabase)
     
     func testFetchClothingItems_LoadFailed_ReturnsRandomError() {
 
-        RepositoryTests.networkMock.returnError = true
+        RepositoryTests.mockNetwork.returnError = true
 
         sut.fetchAllBeers() { result in
 
@@ -35,7 +35,7 @@ class RepositoryTests: XCTestCase {
 
     func testFetchClothingItems_LoadSuccessful_ReturnsUnexpectedResponseTypeError() {
 
-        RepositoryTests.networkMock.responseObject = ""
+        RepositoryTests.mockNetwork.responseObject = ""
 
         sut.fetchAllBeers() { result in
 
@@ -53,7 +53,7 @@ class RepositoryTests: XCTestCase {
 
     func testFetchClothingItems_LoadSuccessful_ReturnCorrectObjectType() {
         
-        RepositoryTests.networkMock.responseObject = [Beer(name: "Name", abv: 1.2, imageURLString: "")]
+        RepositoryTests.mockNetwork.responseObject = [Beer(name: "Name", abv: 1.2, imageURLString: "")]
 
         sut.fetchAllBeers() { result in
 

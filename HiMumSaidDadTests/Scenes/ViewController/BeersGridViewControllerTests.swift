@@ -1,5 +1,5 @@
 import XCTest
- @testable import HiMumSaidDad
+@testable import HiMumSaidDad
 
 class BeersGridViewControllerTests: XCTestCase {
     
@@ -7,7 +7,7 @@ class BeersGridViewControllerTests: XCTestCase {
     
     override func setUp() {
 
-        sut.viewModel = BeersGridViewModelMock()
+        sut.viewModel = MockBeersGridViewModel()
         _ = sut.view
     }
 

@@ -1,7 +1,7 @@
 import Foundation
 @testable import HiMumSaidDad
 
-struct NetworkRequestMock: NetworkRequest {
+struct MockNetworkRequest: NetworkRequest {
 
     let endpoint: String
     let query: String?

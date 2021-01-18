@@ -72,12 +72,12 @@ class BeersGridViewModel: BeersGridViewModelType, BeersGridViewModelInputs, Beer
                     .fetchAllBeers()
                     .trackActivity(activityIndicator)
                     .trackErrors(with: errorRelay)
-                    .map { beers -> [BeersGridSectionModel] in
-                        let viewModels = beers.map { BeerGridCellViewModel(beer: $0, imageRepository: imageRepository) }
-                        let headerViewModel = BeersGridHeaderViewModel()
-                        return [BeersGridSectionModel(model: headerViewModel, items: viewModels)]
-                    }
-        }.asDriver(onErrorJustReturn: [])
+            }.map { beers -> [BeersGridSectionModel] in
+                let viewModels = beers.map { BeerGridCellViewModel(beer: $0, imageRepository: imageRepository) }
+                let headerViewModel = BeersGridHeaderViewModel()
+                return [BeersGridSectionModel(model: headerViewModel, items: viewModels)]
+            }
+            .asDriver(onErrorJustReturn: [])
     }
 
     // MARK: - Inputs

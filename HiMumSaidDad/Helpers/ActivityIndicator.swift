@@ -1,5 +1,6 @@
 import RxSwift
 import RxCocoa
+import Foundation
 
 /**
  Enables monitoring of sequence computation.

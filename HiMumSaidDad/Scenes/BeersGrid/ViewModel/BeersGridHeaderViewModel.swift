@@ -1,7 +1,7 @@
 import Foundation
 import RxDataSources
 
-protocol BeersGridHeaderViewModelType: IdentifiableType {
+protocol BeersGridHeaderViewModelType: IdentifiableType, Equatable {
 
 }
 

@@ -11,14 +11,14 @@ import XCTest
 
 class ImageRepositoryTests: XCTestCase {
 
-    static var networkMock = NetworkMock()
-    static var databaseMock = DatabaseMock()
-    let sut = Repository(network: networkMock, database: databaseMock)
+    static var mockNetwork = MockNetwork()
+    static var mockDatabase = MockDatabase()
+    let sut = Repository(network: mockNetwork, database: mockDatabase)
     let beer = Beer(name: "Name", abv: 1.2, imageURLString: "www.hello.com")
 
     func testFetchImage_LoadFailed_ReturnsRandomError() {
 
-        ImageRepositoryTests.networkMock.returnError = true
+        ImageRepositoryTests.mockNetwork.returnError = true
 
         sut.fetchImage(for: beer) { result in
 
@@ -41,7 +41,7 @@ class ImageRepositoryTests: XCTestCase {
         let mockData = try! Data(contentsOf: fileURL)
         let localImage = UIImage(data: mockData)
 
-        ImageRepositoryTests.networkMock.responseObject = mockData
+        ImageRepositoryTests.mockNetwork.responseObject = mockData
 
         sut.fetchImage(for: beer) { result in
 

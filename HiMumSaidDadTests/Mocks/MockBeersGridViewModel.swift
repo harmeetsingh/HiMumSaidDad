@@ -3,7 +3,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-struct BeersGridViewModelMock: BeersGridViewModelType, BeersGridViewModelInputs, BeersGridViewModelOutputs {
+struct MockBeersGridViewModel: BeersGridViewModelType, BeersGridViewModelInputs, BeersGridViewModelOutputs {
     func load() {
     }
     
@@ -17,5 +17,5 @@ struct BeersGridViewModelMock: BeersGridViewModelType, BeersGridViewModelInputs,
 
     var section: Driver<[BeersGridSectionModel]> = .just([BeersGridSectionModel(model: BeersGridHeaderViewModel(), 
                                                                                 items: [BeerGridCellViewModel(beer: Beer.fake(), 
-                                                                                                              imageRepository: RepositoryMock())])])    
+                                                                                                              imageRepository: MockRepository())])])    
 }

@@ -1,5 +1,5 @@
 //
-//  NetworkMock.swift
+//  MockNetwork.swift
 //  HiMumSaidDadTests
 //
 //  Created by Harmeet Singh on 25/10/2019.
@@ -9,7 +9,7 @@
 import Foundation
 @testable import HiMumSaidDad
 
-struct NetworkMock: Network {
+struct MockNetwork: Network {
     
     var returnError = false
     var responseObject: Decodable?

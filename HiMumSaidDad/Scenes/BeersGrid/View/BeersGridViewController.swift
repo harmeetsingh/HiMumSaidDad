@@ -4,18 +4,23 @@ import RxCocoa
 import RxDataSources
 
 class BeersGridViewController: UIViewController {
+    
+    // MARK: - Properties
 
     @IBOutlet var loadingView: UIView!
     @IBOutlet var errorView: UIView!
     @IBOutlet var collectionView: UICollectionView!
     var viewModel: BeersGridViewModelType! 
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupCollectionViewLayout()
         bind(viewModel.outputs)
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.inputs.load()
@@ -54,8 +59,18 @@ class BeersGridViewController: UIViewController {
             } 
 
             cell.viewModel = viewModel
-            cell.viewModel.load()
+            cell.viewModel.inputs.load()
             return cell
         })
+    }
+    
+    private func setupCollectionViewLayout() {
+        let width = (UIScreen.main.bounds.width - 30) / 2
+        let newSize = CGSize(width: width, height: 318)
+        let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
+        layout?.itemSize = newSize
+        layout?.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        layout?.minimumLineSpacing = 10
+        layout?.minimumInteritemSpacing = 5
     }
 }

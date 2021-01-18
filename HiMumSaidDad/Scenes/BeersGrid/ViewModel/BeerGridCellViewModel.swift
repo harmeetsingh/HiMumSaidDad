@@ -23,6 +23,8 @@ protocol BeerGridCellViewModelType: IdentifiableType, Equatable {
 }
 
 class BeerGridCellViewModel: BeerGridCellViewModelType, BeerGridCellViewModelOutputs, BeerGridCellViewModelInputs {
+    
+    // MARK: - Properties
 
     var outputs: BeerGridCellViewModelOutputs { return self }
     var inputs: BeerGridCellViewModelInputs { return self }
@@ -33,10 +35,13 @@ class BeerGridCellViewModel: BeerGridCellViewModelType, BeerGridCellViewModelOut
     
     private let beer: Beer
     private let imageRepository: ImageRepository
+    private let loadRelay = PublishRelay<Void>()
     private let imageRelay = PublishRelay<UIImage>()
 
     typealias Identity = String
     let identity = "BeerGridCellViewModel"
+    
+    // MARK: - Lifecycle
     
     init(beer: Beer,
          imageRepository: ImageRepository) {
@@ -44,21 +49,16 @@ class BeerGridCellViewModel: BeerGridCellViewModelType, BeerGridCellViewModelOut
         self.imageRepository = imageRepository
         name = .just(beer.name)
         abv = .just(String(describing:beer.abv))
-
-        image = imageRelay
+        
+        image = imageRepository
+            .fetchImage(for: beer)
             .asDriver(onErrorJustReturn: UIImage())
     }
+    
+    // MARK: - Inputs
 
     func load() {
-        imageRepository.fetchImage(for: beer) { [weak self] result in
-            switch result {
-            case .success(let beerImage):
-                guard let self = self else { return }
-                self.imageRelay.accept(beerImage)
-            default:
-                break
-            }
-        }
+        loadRelay.accept(())
     }
 
     static func == (lhs: BeerGridCellViewModel, rhs: BeerGridCellViewModel) -> Bool {

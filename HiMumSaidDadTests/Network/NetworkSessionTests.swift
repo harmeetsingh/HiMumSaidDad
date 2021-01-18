@@ -6,14 +6,14 @@ class NetworkSessionTests: XCTestCase {
 
     // MARK: - Properties
 
-    let networkRequest = NetworkRequestMock(endpoint: "/something/cool",
+    let networkRequest = MockNetworkRequest(endpoint: "/something/cool",
                                             query: "?A=1",
                                             method: HTTPMethodType.get,
                                             headers: nil,
                                             parameters: nil)
 
-    let networkImageRequest = NetworkImageRequestMock()
-    let responseDecoder = NetworkResponseDecoderMock()
+    let networkImageRequest = MockNetworkImageRequest()
+    let responseDecoder = MockNetworkResponseDecoder()
 
     static var mockSession = SuperSession()
     var sut = NetworkSession(session: mockSession, domain: "domain")
@@ -28,7 +28,7 @@ class NetworkSessionTests: XCTestCase {
 
     func testLoad_InvalidRequest_ReturnsNilURLError() {
 
-        let networkRequest = NetworkRequestMock(endpoint: "",
+        let networkRequest = MockNetworkRequest(endpoint: "",
                                                 query: "",
                                                 method: HTTPMethodType.get,
                                                 headers: nil,
@@ -56,7 +56,7 @@ class NetworkSessionTests: XCTestCase {
 
         let expectation = self.expectation(description: "testLoad_ErrorReturned_ReturnsCorrectError")
 
-        let networkRequest = NetworkRequestMock(endpoint: "something/cool",
+        let networkRequest = MockNetworkRequest(endpoint: "something/cool",
                                                 query: nil,
                                                 method: HTTPMethodType.get,
                                                 headers: nil,
@@ -279,7 +279,7 @@ class NetworkSessionTests: XCTestCase {
             case .success(let responseImageData):
                 let actualImage = UIImage(data: responseImageData)
                 let expectedImage = UIImage(data: mockData)
-                XCTAssertEqual(actualImage?.pngData(), expectedImage?.pngData())
+                XCTAssertEqual(actualImage?.pngData()?.count, expectedImage?.pngData()?.count)
                 expectation.fulfill()
             default:
                 break

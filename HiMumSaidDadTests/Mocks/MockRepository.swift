@@ -1,7 +1,7 @@
 import UIKit
 @testable import HiMumSaidDad
 
-class RepositoryMock: RepositoryType {
+class MockRepository: RepositoryType {
 
     var fetchAllBeersCompletion: Result<[Beer], Error> = .failure(MockError.instance)
     func fetchAllBeers(completion: @escaping (Result<[Beer], Error>) -> Void) {

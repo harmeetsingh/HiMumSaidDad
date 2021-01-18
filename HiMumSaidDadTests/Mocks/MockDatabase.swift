@@ -1,5 +1,5 @@
 //
-//  BeersRepository.swift
+//  DatabaseMock.swift
 //  HiMumSaidDadTests
 //
 //  Created by Harmeet Singh on 25/10/2019.
@@ -7,3 +7,8 @@
 //
 
 import Foundation
+@testable import HiMumSaidDad
+
+struct MockDatabase: Database {
+    
+}
